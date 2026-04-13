@@ -17,7 +17,7 @@ const AboutSection = () => {
         >
           <div className="aspect-[3/4] bg-secondary-foreground/10 rounded-sm overflow-hidden relative">
             <img
-              src="/assets/omar-profile.JPG"
+              src="/img/omar-profile.jpg"
               alt="Omar Bensouda"
               className="absolute inset-0 w-full h-full object-cover"
             />
