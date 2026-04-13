@@ -12,6 +12,12 @@ dist
 dist-ssr
 *.local
 
+# Raw unoptimized source assets (too large to ship)
+IMGS/
+assets/
+public/assets
+.netlify
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

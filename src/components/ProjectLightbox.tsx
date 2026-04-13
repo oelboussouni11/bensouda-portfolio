@@ -1,6 +1,6 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { projects, type Project } from "@/data/projects";
 
 interface ProjectLightboxProps {
@@ -10,6 +10,7 @@ interface ProjectLightboxProps {
 }
 
 const ProjectLightbox = ({ project, onClose, onNavigate }: ProjectLightboxProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
   const currentIndex = project ? projects.findIndex((p) => p.id === project.id) : -1;
   const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
@@ -33,8 +34,6 @@ const ProjectLightbox = ({ project, onClose, onNavigate }: ProjectLightboxProps)
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [project, handleKeyDown]);
-
-  const isVideo = project?.category === "videography";
 
   return (
     <AnimatePresence>
@@ -72,7 +71,7 @@ const ProjectLightbox = ({ project, onClose, onNavigate }: ProjectLightboxProps)
               <ChevronLeft size={28} />
             </button>
 
-            {/* Center: image + info */}
+            {/* Center: video + info */}
             <AnimatePresence mode="wait">
               <motion.div
                 key={project.id}
@@ -82,28 +81,23 @@ const ProjectLightbox = ({ project, onClose, onNavigate }: ProjectLightboxProps)
                 transition={{ duration: 0.3 }}
                 className="flex-1 h-full flex flex-col md:flex-row gap-6 md:gap-12 items-center justify-center px-2"
               >
-                {/* Image area */}
-                <div className="relative w-full md:w-3/5 max-h-[60vh] md:max-h-[75vh] aspect-[4/3] bg-muted rounded-sm overflow-hidden shrink-0">
-                  <div className="absolute inset-0 bg-gradient-to-br from-muted to-background" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-serif text-8xl md:text-[10rem] text-muted-foreground/10 italic select-none">
-                      {project.title.charAt(0)}
-                    </span>
-                  </div>
-                  {isVideo && (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 rounded-full border-2 border-primary flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-500 cursor-pointer group">
-                        <Play size={28} className="text-primary group-hover:text-primary-foreground ml-1 transition-colors" />
-                      </div>
-                    </div>
-                  )}
+                {/* Video area */}
+                <div className="relative w-full md:w-3/5 max-h-[60vh] md:max-h-[75vh] aspect-video bg-black rounded-sm overflow-hidden shrink-0">
+                  <video
+                    ref={videoRef}
+                    src={project.videoSrc}
+                    controls
+                    autoPlay
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-contain"
+                  />
                 </div>
 
                 {/* Project info */}
                 <div className="w-full md:w-2/5 max-w-md space-y-6 pb-6 md:pb-0">
                   <div>
                     <p className="text-[10px] tracking-[0.4em] uppercase text-primary font-sans mb-2">
-                      {project.category}
+                      Video
                     </p>
                     <h2 className="font-serif text-3xl md:text-5xl text-foreground">{project.title}</h2>
                   </div>

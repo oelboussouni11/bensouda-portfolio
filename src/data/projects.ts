@@ -1,22 +1,83 @@
-export type ProjectCategory = "photography" | "videography";
-
 export interface Project {
   id: string;
   title: string;
-  category: ProjectCategory;
-  aspect: string;
   description: string;
   date: string;
   location: string;
+  videoSrc: string;
 }
 
 export const projects: Project[] = [
-  { id: "urban-shadows", title: "Urban Shadows", category: "photography", aspect: "aspect-[3/4]", description: "A series exploring the interplay of light and darkness in Moroccan urban landscapes.", date: "2025", location: "Casablanca" },
-  { id: "golden-hour", title: "Golden Hour", category: "photography", aspect: "aspect-[4/3]", description: "Portraits bathed in the warm glow of the Moroccan golden hour.", date: "2025", location: "Marrakech" },
-  { id: "brand-film", title: "Brand Film", category: "videography", aspect: "aspect-[16/9]", description: "A cinematic brand film capturing the essence of a luxury resort.", date: "2026", location: "Essaouira" },
-  { id: "portrait-series", title: "Portrait Series", category: "photography", aspect: "aspect-[3/4]", description: "Intimate editorial portraits showcasing raw emotion and character.", date: "2025", location: "Rabat" },
-  { id: "wedding-reel", title: "Wedding Reel", category: "videography", aspect: "aspect-[4/3]", description: "A highlight reel from a beautiful destination wedding.", date: "2025", location: "Tangier" },
-  { id: "street-life", title: "Street Life", category: "photography", aspect: "aspect-[1/1]", description: "Documentary photography of everyday moments in the medina.", date: "2024", location: "Fes" },
-  { id: "documentary", title: "Documentary", category: "videography", aspect: "aspect-[16/9]", description: "A short documentary exploring traditional Moroccan craftsmanship.", date: "2025", location: "Chefchaouen" },
-  { id: "architecture", title: "Architecture", category: "photography", aspect: "aspect-[3/4]", description: "Geometric beauty in modern and traditional Moroccan architecture.", date: "2026", location: "Casablanca" },
+  {
+    id: "best-of-egypt",
+    title: "Best of Egypt",
+    description: "A cinematic highlight reel capturing the best moments from Egypt.",
+    date: "2025",
+    location: "Egypt",
+    videoSrc: "/assets/BEST OFF EGYPT .mp4",
+  },
+  {
+    id: "intro-egypt",
+    title: "Intro Egypt",
+    description: "Cinematic introduction capturing the spirit and energy of Egypt.",
+    date: "2025",
+    location: "Egypt",
+    videoSrc: "/assets/INTRO EGYPT.mp4",
+  },
+  {
+    id: "egypt-with-cupra",
+    title: "Egypt with Cupra",
+    description: "Full coverage of the Cupra event in Egypt — high energy, raw moments.",
+    date: "2025",
+    location: "Egypt",
+    videoSrc: "/assets/EGYPT WITH CUPRA.mp4",
+  },
+  {
+    id: "kawtar-x-cupra",
+    title: "Kawtar x Cupra",
+    description: "A creative collaboration blending fashion and automotive culture.",
+    date: "2025",
+    location: "Morocco",
+    videoSrc: "/assets/KAWTAR X CUPRA.mp4",
+  },
+  {
+    id: "layali-padel",
+    title: "Layali Padel",
+    description: "Dynamic coverage of the Layali Padel event — sport, energy, and atmosphere.",
+    date: "2025",
+    location: "Morocco",
+    videoSrc: "/assets/LAYALI PADEL.mp4",
+  },
+  {
+    id: "padelfip-agadir",
+    title: "PadelFIP Agadir",
+    description: "Official event film for PadelFIP in Agadir — competition at its finest.",
+    date: "2025",
+    location: "Agadir",
+    videoSrc: "/assets/PADELFIP AGADIR.mp4",
+  },
+  {
+    id: "rush-drop",
+    title: "Rush Drop",
+    description: "Fast-paced, adrenaline-fueled edit — pure energy and motion.",
+    date: "2025",
+    location: "Morocco",
+    videoSrc: "/assets/RUSH DROP.mp4",
+  },
+  {
+    id: "rush-project-co-hustler",
+    title: "Rush Project Co Hustler",
+    description: "A collaborative project with Co Hustler — bold visuals, sharp editing.",
+    date: "2025",
+    location: "Morocco",
+    videoSrc: "/assets/RUSH PROJECT CO HUSTLER.mp4",
+  },
+  {
+    id: "sunday-with-charif",
+    title: "Sunday with Charif",
+    description: "A laid-back Sunday session with Charif — authentic vibes, real moments.",
+    date: "2025",
+    location: "Morocco",
+    videoSrc: "/assets/Sunday with Charif.mp4",
+  },
 ];

@@ -15,30 +15,41 @@ const AboutSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="grid md:grid-cols-2 gap-12 md:gap-20 items-center"
         >
-          {/* Image placeholder */}
           <div className="aspect-[3/4] bg-secondary-foreground/10 rounded-sm overflow-hidden relative">
+            <img
+              src="/assets/omar-profile.JPG"
+              alt="Omar Bensouda"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-transparent to-secondary-foreground/20" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-serif text-6xl text-secondary-foreground/20 italic">OB</span>
-            </div>
           </div>
 
           {/* Text */}
           <div>
             <p className="text-xs tracking-[0.4em] uppercase text-accent font-sans mb-4">
-              About Me
+              About
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-secondary-foreground leading-tight mb-6">
-              Telling stories that <span className="italic">move</span> people.
+            <h2 className="font-serif text-3xl md:text-4xl text-secondary-foreground leading-tight mb-2">
+              Omar Bensouda, <span className="italic">Omateur</span>
             </h2>
-            <p className="font-sans text-sm md:text-base text-secondary-foreground/70 leading-relaxed mb-4">
-              I'm Omar Bensouda — a videographer and photographer based in Morocco, 
-              passionate about capturing raw emotions and cinematic moments. From brand films 
-              to editorial portraits, every frame is crafted with intention.
+            <p className="font-sans text-sm text-secondary-foreground/50 leading-relaxed mb-6">
+              Camera in one hand.<br />
+              Ideas in the other.
             </p>
-            <p className="font-sans text-sm md:text-base text-secondary-foreground/70 leading-relaxed">
-              With years of experience behind the lens, I bring a unique perspective 
-              that blends documentary authenticity with artistic vision.
+            <p className="font-sans text-sm md:text-base text-secondary-foreground/70 leading-relaxed mb-6">
+              Film director.<br />
+              Videographer.<br />
+              Photographer.<br />
+              Graphic designer.<br />
+              Art director.
+            </p>
+            <p className="font-sans text-sm md:text-base text-secondary-foreground/70 leading-relaxed mb-6">
+              I create visuals, stories and concepts that live somewhere between cinema, design and experimentation.
+            </p>
+            <p className="font-sans text-sm text-secondary-foreground/50 leading-relaxed italic">
+              Some projects move.<br />
+              Some stay still.<br />
+              All of them try to say something.
             </p>
           </div>
         </motion.div>
