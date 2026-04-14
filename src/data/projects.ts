@@ -7,6 +7,8 @@ export interface Project {
   videoSrc: string;
 }
 
+const CDN = "https://pub-20adc492c7ab4f71b2244ee89738cbd2.r2.dev/assets-compressed";
+
 export const projects: Project[] = [
   {
     id: "best-of-egypt",
@@ -14,7 +16,7 @@ export const projects: Project[] = [
     description: "A cinematic highlight reel capturing the best moments from Egypt.",
     date: "2025",
     location: "Egypt",
-    videoSrc: "/assets/BEST OFF EGYPT .mp4",
+    videoSrc: `${CDN}/BEST%20OFF%20EGYPT%20.mp4`,
   },
   {
     id: "intro-egypt",
@@ -22,7 +24,7 @@ export const projects: Project[] = [
     description: "Cinematic introduction capturing the spirit and energy of Egypt.",
     date: "2025",
     location: "Egypt",
-    videoSrc: "/assets/INTRO EGYPT.mp4",
+    videoSrc: `${CDN}/INTRO%20EGYPT.mp4`,
   },
   {
     id: "egypt-with-cupra",
@@ -30,7 +32,7 @@ export const projects: Project[] = [
     description: "Full coverage of the Cupra event in Egypt — high energy, raw moments.",
     date: "2025",
     location: "Egypt",
-    videoSrc: "/assets/EGYPT WITH CUPRA.mp4",
+    videoSrc: `${CDN}/EGYPT%20WITH%20CUPRA.mp4`,
   },
   {
     id: "kawtar-x-cupra",
@@ -38,7 +40,7 @@ export const projects: Project[] = [
     description: "A creative collaboration blending fashion and automotive culture.",
     date: "2025",
     location: "Morocco",
-    videoSrc: "/assets/KAWTAR X CUPRA.mp4",
+    videoSrc: `${CDN}/KAWTAR%20X%20CUPRA.mp4`,
   },
   {
     id: "layali-padel",
@@ -46,7 +48,7 @@ export const projects: Project[] = [
     description: "Dynamic coverage of the Layali Padel event — sport, energy, and atmosphere.",
     date: "2025",
     location: "Morocco",
-    videoSrc: "/assets/LAYALI PADEL.mp4",
+    videoSrc: `${CDN}/LAYALI%20PADEL.mp4`,
   },
   {
     id: "padelfip-agadir",
@@ -54,7 +56,7 @@ export const projects: Project[] = [
     description: "Official event film for PadelFIP in Agadir — competition at its finest.",
     date: "2025",
     location: "Agadir",
-    videoSrc: "/assets/PADELFIP AGADIR.mp4",
+    videoSrc: `${CDN}/PADELFIP%20AGADIR.mp4`,
   },
   {
     id: "rush-drop",
@@ -62,7 +64,7 @@ export const projects: Project[] = [
     description: "Fast-paced, adrenaline-fueled edit — pure energy and motion.",
     date: "2025",
     location: "Morocco",
-    videoSrc: "/assets/RUSH DROP.mp4",
+    videoSrc: `${CDN}/RUSH%20DROP.mp4`,
   },
   {
     id: "rush-project-co-hustler",
@@ -70,7 +72,7 @@ export const projects: Project[] = [
     description: "A collaborative project with Co Hustler — bold visuals, sharp editing.",
     date: "2025",
     location: "Morocco",
-    videoSrc: "/assets/RUSH PROJECT CO HUSTLER.mp4",
+    videoSrc: `${CDN}/RUSH%20PROJECT%20CO%20HUSTLER.mp4`,
   },
   {
     id: "sunday-with-charif",
@@ -78,6 +80,6 @@ export const projects: Project[] = [
     description: "A laid-back Sunday session with Charif — authentic vibes, real moments.",
     date: "2025",
     location: "Morocco",
-    videoSrc: "/assets/Sunday with Charif.mp4",
+    videoSrc: `${CDN}/Sunday%20with%20Charif.mp4`,
   },
 ];
