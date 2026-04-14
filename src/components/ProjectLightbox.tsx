@@ -86,6 +86,7 @@ const ProjectLightbox = ({ project, onClose, onNavigate }: ProjectLightboxProps)
                   <video
                     ref={videoRef}
                     src={project.videoSrc}
+                    poster={project.poster}
                     controls
                     autoPlay
                     playsInline

@@ -40,9 +40,10 @@ const GallerySection = () => {
                   <div className="aspect-video bg-muted relative rounded-sm overflow-hidden">
                     <video
                       src={item.videoSrc}
+                      poster={item.poster}
                       muted
                       playsInline
-                      preload="metadata"
+                      preload="none"
                       className="absolute inset-0 w-full h-full object-cover"
                       onMouseEnter={(e) => e.currentTarget.play()}
                       onMouseLeave={(e) => {

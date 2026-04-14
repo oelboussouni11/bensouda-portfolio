@@ -5,9 +5,11 @@ export interface Project {
   date: string;
   location: string;
   videoSrc: string;
+  poster: string;
 }
 
 const CDN = "https://pub-20adc492c7ab4f71b2244ee89738cbd2.r2.dev/assets-compressed";
+const poster = (id: string) => `/video-posters/${id}.jpg`;
 
 export const projects: Project[] = [
   {
@@ -17,6 +19,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Egypt",
     videoSrc: `${CDN}/BEST%20OFF%20EGYPT%20.mp4`,
+    poster: poster("best-of-egypt"),
   },
   {
     id: "intro-egypt",
@@ -25,6 +28,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Egypt",
     videoSrc: `${CDN}/INTRO%20EGYPT.mp4`,
+    poster: poster("intro-egypt"),
   },
   {
     id: "egypt-with-cupra",
@@ -33,6 +37,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Egypt",
     videoSrc: `${CDN}/EGYPT%20WITH%20CUPRA.mp4`,
+    poster: poster("egypt-with-cupra"),
   },
   {
     id: "kawtar-x-cupra",
@@ -41,6 +46,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Morocco",
     videoSrc: `${CDN}/KAWTAR%20X%20CUPRA.mp4`,
+    poster: poster("kawtar-x-cupra"),
   },
   {
     id: "layali-padel",
@@ -49,6 +55,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Morocco",
     videoSrc: `${CDN}/LAYALI%20PADEL.mp4`,
+    poster: poster("layali-padel"),
   },
   {
     id: "padelfip-agadir",
@@ -57,6 +64,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Agadir",
     videoSrc: `${CDN}/PADELFIP%20AGADIR.mp4`,
+    poster: poster("padelfip-agadir"),
   },
   {
     id: "rush-drop",
@@ -65,6 +73,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Morocco",
     videoSrc: `${CDN}/RUSH%20DROP.mp4`,
+    poster: poster("rush-drop"),
   },
   {
     id: "rush-project-co-hustler",
@@ -73,6 +82,7 @@ export const projects: Project[] = [
     date: "2025",
     location: "Morocco",
     videoSrc: `${CDN}/RUSH%20PROJECT%20CO%20HUSTLER.mp4`,
+    poster: poster("rush-project-co-hustler"),
   },
   {
     id: "sunday-with-charif",
@@ -81,5 +91,6 @@ export const projects: Project[] = [
     date: "2025",
     location: "Morocco",
     videoSrc: `${CDN}/Sunday%20with%20Charif.mp4`,
+    poster: poster("sunday-with-charif"),
   },
 ];
